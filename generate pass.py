@@ -34,4 +34,32 @@ while True:
 password = generate_random_password(password_length)
 print("Generated Password:", password)
  #include options for symbols words,lowercase/uppercase
+import random
+import string
 
+def generate_password(length, include_symbols=False, include_numbers=False, include_uppercase=False, include_lowercase=False):
+    characters = ''
+    if include_symbols:
+        characters += string.punctuation
+    if include_numbers:
+        characters += string.digits
+    if include_uppercase:
+        characters += string.ascii_uppercase
+    if include_lowercase:
+        characters += string.ascii_lowercase
+
+    if not characters:
+        print("Error: No character set selected.")
+        return None
+
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+# Example usage:
+length = 12  # Set the desired length of the password
+include_symbols = True  # Set to True if you want to include symbols
+include_numbers = True  # Set to True if you want to include numbers
+include_uppercase = True  # Set to True if you want to include uppercase letters
+include_lowercase = True  # Set to True if you want to include lowercase letters
+
+password = generate_password(length, include_symbols, include_numbers, include_uppercase, include_lowercase)
+print("Generated password:", password)
