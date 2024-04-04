@@ -33,4 +33,5 @@ while True:
         
 password = generate_random_password(password_length)
 print("Generated Password:", password)
+ #include options for symbols words,lowercase/uppercase
 
