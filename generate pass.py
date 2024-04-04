@@ -63,3 +63,8 @@ include_lowercase = True  # Set to True if you want to include lowercase letters
 
 password = generate_password(length, include_symbols, include_numbers, include_uppercase, include_lowercase)
 print("Generated password:", password)
+# Display Password
+import getpass
+
+password = getpass.getpass("Enter your password: ")
+print("Your password is:", password)
