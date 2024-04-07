@@ -31,7 +31,11 @@ while True:
     except ValueError as e:
         print("Invalid input. Please enter a positive integer.")
         
-password = generate_random_password(password_length)
-print("Generated Password:", password)
- #include options for symbols words,lowercase/uppercase
+# To generate Password Given 
+
+import getpass
+
+password = getpass.getpass("Enter your password: ")
+print("Your password is:", password)
+
 
